@@ -257,22 +257,6 @@ h1{
   text-overflow:ellipsis;
 }
 
-.sing-btn{
-  flex:0 0 auto;
-  background:var(--accent-magenta);
-  color:var(--text-light);
-  border:none;
-  padding:10px 18px;
-  border-radius:999px;
-  font-family:'Work Sans', sans-serif;
-  font-weight:700;
-  font-size:13px;
-  cursor:pointer;
-  transition:background .15s ease, transform .15s ease;
-}
-.sing-btn:hover{ background:#cf2b73; transform:scale(1.04); }
-.sing-btn:active{ transform:scale(0.97); }
-
 .empty-state{
   text-align:center;
   padding:60px 24px;
@@ -309,14 +293,13 @@ footer{
   .song-info{ flex-basis:100%; order:1; }
   .led{ order:0; }
   .genre-tag{ order:2; }
-  .sing-btn{ order:3; margin-left:auto; }
 }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="eyebrow">Karaoke Night · Cancionero 2024</div>
+  <div class="eyebrow">ECUAKARAOKE · Cancionero 2024</div>
   <h1>CANCIONERO</h1>
   <p class="subtitle" id="subtitleText">Busca por número, título, artista o género.</p>
 </header>
@@ -432,7 +415,6 @@ function render(){
         <div class="song-artist">${s.a}</div>
       </div>
       <div class="genre-tag">${s.g}</div>
-      <button class="sing-btn" onclick="alert('Añadido a la cola: ${s.t.replace(/'/g,"\\'")}')">Cantar</button>
     </div>
   `).join('');
 
